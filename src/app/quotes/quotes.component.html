@@ -1,0 +1,9 @@
+<mat-list>
+  <mat-list-item   *ngFor='let quote of quotes'>
+      <span class='mat-list-item'>
+              {{ quote.sentence }} - {{ quote.character.name }}
+      </span>
+  </mat-list-item>
+  <mat-divider></mat-divider>
+</mat-list>
+<button mat-button color="primary"(click)='getNewQuotes()'>Get new quotes</button>

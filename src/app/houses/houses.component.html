@@ -1,0 +1,26 @@
+<section>
+    <mat-form-field class='example-full-width'>
+      <input
+        matInput
+        type='text'
+        [(ngModel)]='searchValue'
+        (input)='onSearchInput()'
+        placeholder='Search For GOT House'>
+        <button
+          *ngIf='!searchValue || searchValue===""'
+          matSuffix
+          mat-icon-button
+          aria-label='Clear'
+          (click)='clearSearch()'>
+          <mat-icon>close</mat-icon>
+        </button>
+    </mat-form-field>
+
+  <div *ngFor='let house of filteredHouses'>
+    <p>{{house.name}}</p>
+    <p>{{house.slug}}</p>
+    <div *ngFor='let member of house.members'>
+      <li>{{member.name}}</li>
+    </div>
+  </div>
+</section>
