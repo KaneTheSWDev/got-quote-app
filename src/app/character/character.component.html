@@ -1,0 +1,9 @@
+<div *ngIf="character">   
+
+    <h2>{{character.name}}</h2>
+    <h2>{{character.house.name}}</h2>
+    <div *ngFor="let quoteword of character.quotes">
+        <li>{{quoteword}}</li>
+    </div>
+
+</div>

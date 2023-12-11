@@ -20,7 +20,8 @@ import { MatFormFieldModule } from '@angular/material/form-field'
 import { FormsModule } from '@angular/forms'
 import { MatIconModule } from '@angular/material/icon';
 import { CharacterCardComponent } from './cards/character-card/character-card.component'
-import { MatCardModule } from '@angular/material/card'
+import { MatCardModule } from '@angular/material/card';
+import { CharacterComponent } from './character/character.component'
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { MatCardModule } from '@angular/material/card'
     QuotesComponent,
     NavbarComponent,
     CharacterCardComponent,
+    CharacterComponent,
   ],
   imports: [
     BrowserModule,

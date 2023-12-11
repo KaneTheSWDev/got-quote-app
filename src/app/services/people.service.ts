@@ -7,12 +7,18 @@ import { Character } from '../models/character'
   providedIn: 'root',
 })
 export class PeopleService {
-  apiUrl = 'https://api.gameofthronesquotes.xyz/v1/characters'
+  charactersApiUrl = 'https://api.gameofthronesquotes.xyz/v1/characters'
+  characterApiUrl = 'https://api.gameofthronesquotes.xyz/v1/character'
 
   constructor(private httpClient: HttpClient) {
   }
 
   getPeople(): Observable<Character[]> {
-    return this.httpClient.get<Character[]>(this.apiUrl)
+    return this.httpClient.get<Character[]>(this.charactersApiUrl)
   }
+
+  getPerson(slug: string): Observable<Character[]> {
+    return this.httpClient.get<Character[]>(`${this.characterApiUrl}/${slug}`)
+  }
+  
 }

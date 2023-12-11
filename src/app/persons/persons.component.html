@@ -16,7 +16,18 @@
     </button>
   </mat-form-field>
 
-  <div *ngFor='let person of filteredPeople'>
+  <!-- <div *ngFor='let person of filteredPeople'>
     <app-character-card *ngIf='filteredPeople' [character]='person'></app-character-card>
-  </div>
+  </div> -->
+<div>
+  <ul>
+    <li *ngFor="let person of filteredPeople">
+      <a routerLink="/persons/{{ person.slug }}">
+       {{ person.name }}
+      </a>
+  
+    </li>
+    </ul>
+</div>
+ 
 </section>
