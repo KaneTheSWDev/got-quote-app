@@ -21,7 +21,8 @@ import { FormsModule } from '@angular/forms'
 import { MatIconModule } from '@angular/material/icon';
 import { CharacterCardComponent } from './cards/character-card/character-card.component'
 import { MatCardModule } from '@angular/material/card';
-import { CharacterComponent } from './character/character.component'
+import { CharacterComponent } from './character/character.component';
+import { HouseDetailsComponent } from './houses/house-details/house-details.component'
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { CharacterComponent } from './character/character.component'
     NavbarComponent,
     CharacterCardComponent,
     CharacterComponent,
+    HouseDetailsComponent,
   ],
   imports: [
     BrowserModule,

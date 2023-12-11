@@ -7,11 +7,17 @@ import { Observable } from 'rxjs'
   providedIn: 'root',
 })
 export class HousesService {
-  apiUrl = 'https://api.gameofthronesquotes.xyz/v1/houses';
+  housesApiUrl = 'https://api.gameofthronesquotes.xyz/v1/houses';
+  houseDetailsApiUrl = 'https://api.gameofthronesquotes.xyz/v1/house';
   constructor(private httpClient: HttpClient) {}
 
   getHouses(): Observable<House[]> {
    return this.httpClient
-      .get<House[]>(this.apiUrl)
+      .get<House[]>(this.housesApiUrl)
+  }
+
+  getHouseDetails(slug: string): Observable<House[]> {
+    return this.httpClient
+      .get<House[]>(`${this.houseDetailsApiUrl}/${slug}`)
   }
 }

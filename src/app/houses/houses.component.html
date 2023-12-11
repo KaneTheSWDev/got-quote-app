@@ -16,11 +16,14 @@
         </button>
     </mat-form-field>
 
-  <div *ngFor='let house of filteredHouses'>
-    <p>{{house.name}}</p>
-    <p>{{house.slug}}</p>
-    <div *ngFor='let member of house.members'>
-      <li>{{member.name}}</li>
-    </div>
+  <div>
+    <ul>
+      <li *ngFor="let house of filteredHouses">
+        <a routerLink="/houses/{{ house.slug }}">
+         {{ house.name }}
+        </a>
+    
+      </li>
+      </ul>
   </div>
 </section>

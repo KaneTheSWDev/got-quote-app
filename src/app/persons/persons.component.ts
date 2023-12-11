@@ -38,7 +38,7 @@ export class PersonsComponent implements OnInit {
   }
 
   private searchItems(term: string): Observable<Character[]> {
-    const filteredItems = this.people.filter(character => character.name.toLowerCase().includes(term.toLowerCase()))
+    const filteredItems = this.people.filter(character => character.name?.toLowerCase().includes(term.toLowerCase()))
     return of(filteredItems)
   }
 
